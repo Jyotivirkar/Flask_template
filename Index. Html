@@ -1,0 +1,16 @@
+#This is index. Html file. 
+
+
+{% extends "base. Html"%}
+
+{% block content %}
+<div class="Jumbotron">
+<h1>please provide username(that meet requirements) </h1>
+<form action="{{url_for('report')}}">
+<label for=" Username ">username</label>
+<input type=" text " Name="" Value="username">
+
+<input type=" Submit" Name="" Value="submit form">
+</form>
+</div>
+{% endblock %}
