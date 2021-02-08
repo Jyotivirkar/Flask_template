@@ -1,0 +1,29 @@
+#This file is report. Html
+
+
+{% extends base. Html%}
+{% block content%}
+
+<div class="jumbotron">
+<p>lets check username! </p>
+
+{% if report%}
+<p>your username passeed all checks!</p>
+{% else %}
+<ul>
+{% if not lower %}
+<li>you did not use Lower case letter</>
+{% endif%}
+
+{% if not upper %}
+<li>you did not use upper case letter</>
+{% endif%}
+
+{% if not num_end%}
+<li>you did not use end in number letter</>
+{% endif%}
+
+</ul>
+{% endif %}
+</div>
+{% endblock %}
