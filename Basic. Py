@@ -1,0 +1,24 @@
+# this is python flask file "basic.py"
+
+from flask import Flask render_template, request
+app=Flask(__name__) 
+ @app.route('/'):
+ def index():
+  return render_template('index.html') 
+
+@app.route('/report'):
+ def report():
+   Lower_letter=false
+   Upper_letter=false
+   Num_end=false
+
+  Username=request.args.get("usename") 
+Lower_letter=any(c.islower() for c in username) 
+Upper_letter=any(c.isupper() for c in username) 
+Num_end=username[-1].isdigit() 
+report=lower_letter and upper_letter and num_end
+
+return render_template('report.html'html'report=report,lower=lower_letter,upper=upper_letter,num_end=num_end) 
+
+int __name__ =='__main__'
+app. run() 
